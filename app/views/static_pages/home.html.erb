@@ -1,14 +1,22 @@
-<!DOCTYPE html>
-<html>
+<!--erbテンプレート provide(:symbol, string) → yield(:symbol-->
+<% provide(:title, "Home") %>
+
+<!-- ドキュメントタイプはlayoutファイル内で宣言する -->
+<!-- <!DOCTYPE html> -->
+<!-- <html> -->
+    <!-- headタグはlayoutファイルに集約 -->
+    <!--
     <head>
-        <title>Home | Ruby on Rails Tutorial Sample App</title>
+        <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
     </head>
-    <body>
-        <h1>Sample App</h1>
-        <p>
-            This is the home page for the
-            <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
-            sample application
-        </p>
-    </body>
-</html>
+    -->
+    <!-- layoutファイルのbodyタグ内に繁栄されるので、bodyタグは不要 -->
+    <!-- <body> -->
+    <h1>Sample App</h1>
+    <p>
+        This is the home page for the
+        <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
+        sample application
+    </p>
+    <!-- </body> -->
+<!-- </html> -->
