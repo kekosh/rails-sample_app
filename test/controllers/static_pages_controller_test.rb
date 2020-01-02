@@ -6,13 +6,13 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     @base_title = "Ruby on Rails Tutorial Sample App"
   end
   
-  #rootのテスト(rootにhomeを設定)
+  #rootのテスト(rootにhomeを設定した場合)
   test "should get root" do
     get root_url
     assert_response :success
   end
   
-  #homeページのテスト
+  #homeページのテスト(root設定していない場合)
   #test "should get home" do
   #  get static_pages_home_url
   #  assert_response :success
